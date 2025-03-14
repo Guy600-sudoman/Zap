@@ -46,7 +46,7 @@ local Window = Rayfield:CreateWindow({
    Icon = "zap",
    LoadingTitle = "Please Wait",
    LoadingSubtitle = "We Are Setting The Script Up",
-   Theme = "Default",
+   Theme = "DarkBlue",
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false,
@@ -200,7 +200,7 @@ local Button = MyScriptsTab:CreateButton({
          Icon = "zap",
          LoadingTitle = "Please Wait",
          LoadingSubtitle = "We are setting everything up",
-         Theme = "Default",
+         Theme = "Ocean",
 
          DisableRayfieldPrompts = false,
          DisableBuildWarnings = false,
@@ -240,25 +240,25 @@ local Button = MyScriptsTab:CreateButton({
    end,
 })
 
-local OtherScriptsTab = Window:CreateTab("Other Scripts", "archive")
+local MoreScriptsTab = Window:CreateTab("More Scripts", "archive")
 
-OtherScriptsTab:CreateButton({
-   Name = "Redz Hub",
+local Button = MoreScriptsTab:CreateButton({
+   Name = "Dex Ɛxplorer",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))()
-   end
+   print("Works!")
+   end,
 })
 
-local OtherScriptsTab:CreateButton({
-   Name = "mspaint v4",
-   Callback = function()
-      loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/002c19202c9946e6047b0c6e0ad51f84.lua"))()
-   end
-})
-
-local Button = OtherScriptsTab:CreateButton({
-   Name = "Inf Yield",
+local Button = MoreScriptsTab:CreateButton({
+   Name = "IY",
    Callback = function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Dex ",
+   Callback = function()
+   -- The function that takes place when the button is pressed
    end,
 })
