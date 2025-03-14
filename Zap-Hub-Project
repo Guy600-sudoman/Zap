@@ -189,3 +189,76 @@ SettingsTab:CreateButton({
 })
    end,
 })
+
+local Button = MyScriptsTab:CreateButton({
+   Name = "Zap Hub | Math Murder",
+   Callback = function()
+         local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+      local Window = Rayfield:CreateWindow({
+         Name = "Zap Hub | Math Murder",
+         Icon = "zap",
+         LoadingTitle = "Please Wait",
+         LoadingSubtitle = "We are setting everything up",
+         Theme = "Default",
+
+         DisableRayfieldPrompts = false,
+         DisableBuildWarnings = false,
+
+         ConfigurationSaving = {
+            Enabled = true,
+            FolderName = nil,
+            FileName = "Big Hub"
+         },
+
+         Discord = {
+            Enabled = false,
+            Invite = "noinvitelink",
+            RememberJoins = true
+         },
+
+         KeySystem = false,
+         KeySettings = {
+            Title = "Untitled",
+            Subtitle = "Key System",
+            Note = "No method of obtaining the key is provided",
+            FileName = "Key",
+            SaveKey = true,
+            GrabKeyFromSite = false,
+            Key = {"Hello"}
+         }
+      })
+
+      local MainTab = Window:CreateTab("Main", "home")
+
+      MainTab:CreateButton({
+         Name = "Show Answers",
+         Callback = function()
+            loadstring(game:HttpGet("https://rawscripts.net/raw/Math-Murder-Reveal-Answer-29160"))()
+         end,
+      })
+   end,
+})
+
+local OtherScriptsTab = Window:CreateTab("Other Scripts", "archive")
+
+OtherScriptsTab:CreateButton({
+   Name = "Redz Hub",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/BloxFruits/refs/heads/main/Source.lua"))()
+   end
+})
+
+local OtherScriptsTab:CreateButton({
+   Name = "mspaint v4",
+   Callback = function()
+      loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/002c19202c9946e6047b0c6e0ad51f84.lua"))()
+   end
+})
+
+local Button = OtherScriptsTab:CreateButton({
+   Name = "Inf Yield",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   end,
+})
